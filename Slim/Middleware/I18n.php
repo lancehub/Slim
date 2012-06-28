@@ -10,7 +10,7 @@ class Slim_Middleware_I18n extends Slim_Middleware{
 
 	public function call(){
 		
-		$lang = $this->settings['default'];
+		$lang = $this->settings['default_lang'];
 		if($this->app->request()->get('lang')) $lang = $this->app->request()->get('lang');
 
 		putenv('LANG='.$lang);
